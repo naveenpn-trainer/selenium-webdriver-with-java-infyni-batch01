@@ -1,1 +1,1 @@
-# selenium-webdriver-with-java-infyni-batch01
+# Selenium Webdriver with Java
