@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.infyni.courses</groupId>
-        <artifactId>selenium-webdriver</artifactId>
+        <artifactId>comphrensive-java-programming</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>module05-working-with-selenium-api</artifactId>
+    <artifactId>module05-exception-handling</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

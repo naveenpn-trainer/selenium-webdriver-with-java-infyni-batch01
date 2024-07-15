@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>comphrensive-java-programming</artifactId>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -17,4 +18,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <modules>
+        <module>module01-language-fundamentals</module>
+        <module>module02-class-and-objects</module>
+        <module>module03-object-oriented-programming</module>
+        <module>module04-abstract-class-and-interface</module>
+        <module>module05-exception-handling</module>
+        <module>module06-collections-and-generics</module>
+    </modules>
 </project>

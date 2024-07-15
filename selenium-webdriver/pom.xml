@@ -13,10 +13,29 @@
     <groupId>org.infyni.courses</groupId>
     <artifactId>selenium-webdriver</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.22.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <modules>
+        <module>module01-getting-started-with-selenium-webdriver</module>
+        <module>module02-identifying-elements</module>
+        <module>module03-working-with-web-controls</module>
+        <module>module04-advance-css-and-xpath-locators</module>
+        <module>module05-handling-webdriver-synchronization</module>
+        <module>module06-advance-interactions-of-webdriver</module>
+        <module>module07-deep-dive-webdriver-api</module>
+    </modules>
 
 </project>

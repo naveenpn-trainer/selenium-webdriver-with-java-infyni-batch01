@@ -11,7 +11,7 @@
     </parent>
 
 
-    <artifactId>module06-working-with-selenium-api</artifactId>
+    <artifactId>module07-deep-dive-webdriver-api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -1,0 +1,7 @@
+<suite name="Demo Application">
+    <test name="TestOne">
+        <classes>
+            <class name="org.infyni.utility.MathClassTest"></class>
+        </classes>
+    </test>
+</suite>
