@@ -23,6 +23,8 @@ public class BrowserNavigation {
         driver.navigate().forward();
         Thread.sleep(3000);
         driver.navigate().refresh();
+
+
     }
 
     @AfterMethod
