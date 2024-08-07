@@ -28,6 +28,7 @@
     <modules>
         <module>page-object-model</module>
         <module>bdd-using-cucumber</module>
+        <module>capstone-project-todo</module>
     </modules>
     <artifactId>framework-development</artifactId>
 
