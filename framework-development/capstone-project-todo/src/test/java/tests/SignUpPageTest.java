@@ -1,9 +1,14 @@
+package tests;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pageobjects.DashboardPage;
+import pageobjects.LoginPage;
+import pageobjects.SignUpPage;
 
 public class SignUpPageTest {
 
@@ -30,13 +35,13 @@ public class SignUpPageTest {
     @Test(priority = 1)
     public void testSignInLink() {
         this.loginPage = this.signUpPage.clickAlreadyHaveAnAccountLink();
-        Assert.assertEquals(this.loginPage.getTitle(),"Login");
+        Assert.assertEquals(this.loginPage.getPageTitle(),"Login");
     }
 
     @Test(priority = 2)
     public void testLogin(){
         this.dashboardPage = this.loginPage.login("nikshaypn","Test@1234");
-        Assert.assertEquals(this.dashboardPage.getTitle(),"Dashboard");
+        Assert.assertEquals(this.dashboardPage.getPageTitle(),"Dashboard");
     }
 
     @AfterClass

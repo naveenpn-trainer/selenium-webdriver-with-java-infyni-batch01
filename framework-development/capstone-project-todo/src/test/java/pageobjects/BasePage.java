@@ -1,3 +1,5 @@
+package pageobjects;
+
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {
@@ -8,7 +10,7 @@ public class BasePage {
     }
 
 
-    public String getTitle(){
+    public String getPageTitle(){
         return  this.driver.getTitle();
     }
 }

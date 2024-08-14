@@ -1,14 +1,14 @@
-package pageobjects;
+package tests;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageobjects.DashboardPage;
+import pageobjects.LoginPage;
 
 public class LoginPageTest {
     LoginPage loginPage;
@@ -22,16 +22,16 @@ public class LoginPageTest {
 
     @Test
     public void clickLogin_WithCorrectCredentials(){
-        DashboardPage dashboardPage = loginPage.clickLogin("admin","password123");
-        Assert.assertEquals(dashboardPage.getDasboardTitle(),"Dashboard");
+        DashboardPage dashboardPage = loginPage.login("admin","password123");
+        Assert.assertEquals(dashboardPage.getPageTitle(),"Dashboard");
     }
 
 
 
     @Test
     public void clickLogin_WithIncorrectCredentials(){
-        DashboardPage dashboardPage = loginPage.clickLogin("tom","tom123");
-        Assert.assertEquals(dashboardPage.getDasboardTitle(),"Login");
+        DashboardPage dashboardPage = loginPage.login("tom","tom123");
+        Assert.assertEquals(dashboardPage.getPageTitle(),"Login");
         Assert.assertEquals(this.driver.findElement(By.id("loginError")).getText(),"Invalid username or password");
     }
 
