@@ -6,6 +6,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pageobjects.LoginPage;
+import util.ResourceFileUtil;
+import util.ResourceFileUtilRefactored;
 
 public class BaseTest {
 
@@ -16,8 +18,10 @@ public class BaseTest {
     public void setUpBeforeClass() {
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
-        driver.get("https://selenium-practice.vercel.app/todo_app/login.html");
-        loginPage.login("admin", "password123");
+        driver.get(ResourceFileUtilRefactored.getInstance().getTestConfigValue("applicationURL"));
+        loginPage.login(ResourceFileUtilRefactored.getInstance().getTestConfigValue("username"), ResourceFileUtilRefactored.getInstance().getTestConfigValue("password"));
+//        driver.get(ResourceFileUtil.getTestConfigValue("applicationURL"));
+//        loginPage.login(ResourceFileUtil.getTestConfigValue("username"), ResourceFileUtil.getTestConfigValue("password"));
     }
 
 

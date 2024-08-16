@@ -2,6 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class DashboardTodoPage extends BasePage {
@@ -21,4 +22,12 @@ public class DashboardTodoPage extends BasePage {
             throw new RuntimeException(e);
         }
     }
+
+    public String getPriority(String todo){
+        WebElement selectElmnt = this.driver.findElement(By.xpath("//tr[td[span[text()='"+todo+"']]]//select"));
+        Select select = new Select(selectElmnt);
+        return select.getFirstSelectedOption().getText();
+    }
+
+
 }
