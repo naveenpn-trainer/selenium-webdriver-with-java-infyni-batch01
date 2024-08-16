@@ -11,7 +11,7 @@ public class DashboardTodoPage extends BasePage {
     }
 
 
-    public void addTask(String todo, String priority){
+    public void addTask(String todo, String priority) {
         this.driver.findElement(By.id("newTodo")).sendKeys(todo);
         Select select = new Select(this.driver.findElement(By.id("priority")));
         select.selectByVisibleText(priority);
@@ -23,11 +23,16 @@ public class DashboardTodoPage extends BasePage {
         }
     }
 
-    public String getPriority(String todo){
-        WebElement selectElmnt = this.driver.findElement(By.xpath("//tr[td[span[text()='"+todo+"']]]//select"));
+    public String getPriority(String todo) {
+        WebElement selectElmnt = this.driver.findElement(By.xpath("//tr[td[span[text()='" + todo + "']]]//select"));
         Select select = new Select(selectElmnt);
         return select.getFirstSelectedOption().getText();
     }
 
+
+    public boolean markToDoComplete(String todo) {
+//        this.driver.findElement(By.xpath())
+        return this.driver.findElements(By.xpath("//tr[td[@class='completed' and .//span[text()='" + todo + "']]]")).size() == 1;
+    }
 
 }
