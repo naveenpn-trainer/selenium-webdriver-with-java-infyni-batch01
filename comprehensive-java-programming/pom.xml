@@ -25,5 +25,6 @@
         <module>module04-abstract-class-and-interface</module>
         <module>module05-exception-handling</module>
         <module>module06-collections-and-generics</module>
+        <module>module07-database-connectivity</module>
     </modules>
 </project>

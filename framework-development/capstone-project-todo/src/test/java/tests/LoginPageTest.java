@@ -27,7 +27,6 @@ public class LoginPageTest {
     }
 
 
-
     @Test
     public void clickLogin_WithIncorrectCredentials(){
         DashboardPage dashboardPage = loginPage.login("tom","tom123");

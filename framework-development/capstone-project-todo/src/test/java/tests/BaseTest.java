@@ -1,5 +1,7 @@
 package tests;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -10,12 +12,14 @@ import util.ResourceFileUtil;
 import util.ResourceFileUtilRefactored;
 
 public class BaseTest {
+    private static final Logger LOGGER = LogManager.getLogger(BaseTest.class);
 
     protected WebDriver driver;
     private LoginPage loginPage;
 
     @BeforeClass
     public void setUpBeforeClass() {
+        LOGGER.debug("Invoked setUpBeforeClass() ");
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
         driver.get(ResourceFileUtilRefactored.getInstance().getTestConfigValue("applicationURL"));

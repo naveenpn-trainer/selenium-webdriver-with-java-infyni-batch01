@@ -1,0 +1,12 @@
+<suite name="Demo Application">
+    <test name="TestOne">
+        <groups>
+            <run>
+                <exclude name="uat"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.DummyTest"></class>
+        </classes>
+    </test>
+</suite>

@@ -16,7 +16,7 @@ public class DashboardPageTodoMenuTest extends BaseTest {
 //        dashboardTodoPage = new DashboardTodoPage(this.driver);
     }
 
-    @Test
+    @Test(groups = "regression")
     public void testAddTodo() {
         this.dashboardTodoPage = dashboardPage.clickTodoLink();
         this.dashboardTodoPage.addTask("Learning Selenium", "High");
