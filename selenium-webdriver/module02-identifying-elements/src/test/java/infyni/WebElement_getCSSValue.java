@@ -13,5 +13,7 @@ public class WebElement_getCSSValue {
         driver.get("https://selenium-practice.vercel.app/webcontrols/Style.html");
         WebElement element = driver.findElement(By.id("btn"));
         System.out.println(element.getCssValue("width"));
+
+        
     }
 }
